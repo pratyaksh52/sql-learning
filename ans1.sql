@@ -79,9 +79,15 @@ FROM EMP;
 
 
 -- 1.13) List names of all employees whose names are 4 characters long
+-- Solution - 1
 SELECT EMP_NAME
 FROM EMP
 WHERE EMP_NAME LIKE "____";
+
+-- Solution - 2 (performs better because we are using an in-built function)
+SELECT EMP_NAME
+FROM EMP
+WHERE LENGTH(EMP_NAME)=4
 
 
 -- 1.14) List names of all employees whose names end with letter "R"
