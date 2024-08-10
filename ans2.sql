@@ -61,6 +61,12 @@ WHERE EMP_NAME LIKE "__r%";
 
 
 -- 2.11) List the names of employees whose names have exactly five characters
+-- Solution - 1
 SELECT EMP_NAME
 FROM EMP
 WHERE EMP_NAME LIKE "_____";
+
+-- Solution - 2
+SELECT EMP_NAME
+FROM EMP
+WHERE LENGTH(EMP_NAME)=5;
