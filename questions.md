@@ -143,15 +143,10 @@
 3. Create a table INCREMENT to store the increment details of an employee. This table stores the employee number, the date of increment and the amount of increment.
 4. Create a table BONUS to store the bonus details of an employee. This table stores the employee number, the date of bonus and the bonus amount.
 5. Insert a new employee with the following details
-
-    Employee number: 7987
-
-    Employee name: ‘BILL’
-
-    Salary: 2500
-
-    Department number: 30
-
+    - Employee number: 7987
+    - Employee name: ‘BILL’
+    - Salary: 2500
+    - Department number: 30
 6. Raise the salary of all the salesman by 10%
 7. Delete the details of all the employees whose salary is less than 1000.
 8. List employees and his manager’s details, where that employee’s salary is greater than his manager’s salary.
@@ -161,18 +156,15 @@
     - If the number is less than 5, compute the sum of numbers from 1 to the given number.
     - Otherwise, compute the product of numbers from 1 to the given number.
     - Insert the result into a temporary table.
-
 2. For a given employee number, create a PL/SQL program that:
     - Retrieves the employee’s salary from the EMP table.  
     - Determines the salary class based on the following criteria:  
       - If the salary is less than 2500, classify it as 'LOW'.  
       - If the salary is 2500 or more, classify it as 'HIGH'.
-
 3. Write a PL/SQL block that accepts a job type from the user.  
     - Search for the given job in the EMP table.  
     - Display one of the following messages:
       - The job occurs only once in the table.  
       - The job occurs more than once in the table.  
       - The job does not exist in the table.
-
 4. Rewrite Question 1 using a PL/SQL function.
