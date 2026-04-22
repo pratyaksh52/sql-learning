@@ -1,5 +1,63 @@
 # SQL Practice Questions
 
+---
+
+## Table Structure
+
+### EMP Table (Structure)
+
+| NAME     | NULL     | TYPE         |
+|----------|----------|--------------|
+| EMPNO    | NOT NULL | NUMBER(4)    |
+| ENAME    |          | VARCHAR2(10) |
+| JOB      |          | VARCHAR2(9)  |
+| MGR      |          | NUMBER(4)    |
+| HIREDATE |          | DATE         |
+| SAL      |          | NUMBER(7,2)  |
+| COMM     |          | NUMBER(7,2)  |
+| DEPTNO   |          | NUMBER(2)    |
+
+
+### DEPT Table (Structure)
+
+| NAME   | NULL | TYPE          |
+|--------|------|---------------|
+| DEPTNO |      | NUMBER(2)     |
+| DNAME  |      | VARCHAR2(14)  |
+| LOC    |      | VARCHAR2(13)  |
+
+
+### EMP Table (Data)
+
+| EMP_NO | EMP_NAME | JOB       | MGR_ID | HIRE_DATE  | SALARY | COMMISSION | DEPT_NO |
+|--------|----------|-----------|--------|------------|--------|------------|---------|
+| 7369   | SMITH    | CLERK     | 7902   | 1980-12-17 | 800    | NULL       | 20      |
+| 7499   | ALLEN    | SALESMAN  | 7698   | 1981-02-20 | 1600   | 300        | 30      |
+| 7521   | WARD     | SALESMAN  | 7698   | 1981-02-22 | 1250   | 500        | 30      |
+| 7566   | JONES    | MANAGER   | 7839   | 1981-04-02 | 2975   | NULL       | 20      |
+| 7654   | MARTIN   | SALESMAN  | 7698   | 1981-09-28 | 1250   | 1400       | 30      |
+| 7698   | BLAKE    | MANAGER   | 7839   | 1981-05-01 | 2850   | NULL       | 30      |
+| 7782   | CLARK    | MANAGER   | 7839   | 1981-06-09 | 2450   | NULL       | 10      |
+| 7788   | SCOTT    | ANALYST   | 7839   | 1982-12-09 | 3000   | NULL       | 20      |
+| 7839   | KING     | PRESIDENT | NULL   | 1981-11-17 | 5000   | NULL       | 10      |
+| 7844   | TURNER   | SALESMAN  | 7698   | 1981-09-08 | 1500   | 0          | 30      |
+| 7876   | ADAMS    | CLERK     | 7788   | 1983-01-12 | 1100   | NULL       | 20      |
+| 7900   | JAMES    | CLERK     | 7698   | 1981-12-03 | 950    | NULL       | 30      |
+| 7902   | FORD     | ANALYST   | 7566   | 1981-12-03 | 3000   | NULL       | 20      |
+| 7934   | MILLER   | CLERK     | 7782   | 1982-01-23 | 1300   | NULL       | 10      |
+
+
+### DEPT Table (Data)
+
+| DEPT_NO | DEPT_NAME | LOC       |
+|---------|-----------|-----------|
+| 10      | Accounting| New York  |
+| 20      | Research  | Dallas    |
+| 30      | Sales     | Chicago   |
+| 40      | Operations| Boston    |
+
+---
+
 ## Section 1
 1. List all the information about employees in the EMP table.
 2. List all the information about departments in the DEPT table.
@@ -78,3 +136,43 @@
 3. List the names of employees drawing the highest salary
 4. List the employees whose salary is second highest in the comapny
 5. List the employees who earn more than the avergae salary in their own department
+
+## Section 7
+1. Add a constraint to the EMP table to ensure that the salary is always in the range 3000 to 10000.
+2. Modify the definition of an employee table by adding two columns employee address and his contact number. Use appropriate data type and size.
+3. Create a table INCREMENT to store the increment details of an employee. This table stores the employee number, the date of increment and the amount of increment.
+4. Create a table BONUS to store the bonus details of an employee. This table stores the employee number, the date of bonus and the bonus amount.
+5. Insert a new employee with the following details
+
+    Employee number: 7987
+
+    Employee name: ‘BILL’
+
+    Salary: 2500
+
+    Department number: 30
+
+6. Raise the salary of all the salesman by 10%
+7. Delete the details of all the employees whose salary is less than 1000.
+8. List employees and his manager’s details, where that employee’s salary is greater than his manager’s salary.
+
+## Section 8
+1. Create a PL/SQL program that accepts a number less than 10:
+    - If the number is less than 5, compute the sum of numbers from 1 to the given number.
+    - Otherwise, compute the product of numbers from 1 to the given number.
+    - Insert the result into a temporary table.
+
+2. For a given employee number, create a PL/SQL program that:
+    - Retrieves the employee’s salary from the EMP table.  
+    - Determines the salary class based on the following criteria:  
+      - If the salary is less than 2500, classify it as 'LOW'.  
+      - If the salary is 2500 or more, classify it as 'HIGH'.
+
+3. Write a PL/SQL block that accepts a job type from the user.  
+    - Search for the given job in the EMP table.  
+    - Display one of the following messages:
+      - The job occurs only once in the table.  
+      - The job occurs more than once in the table.  
+      - The job does not exist in the table.
+
+4. Rewrite Question 1 using a PL/SQL function.
